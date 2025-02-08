@@ -30,7 +30,7 @@ body {
     padding: 1rem;
     margin: 1rem 0;
   }
-  img-size {
+ img-badge{
     width: 30%;  /* Each image takes 30% of the container */
     max-width: 200px; /* Prevents them from getting too big */
     height: auto; /* Keeps aspect ratio */
