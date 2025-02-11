@@ -181,7 +181,7 @@ body {
   margin: 5px 0;
 }
 
- /* dark mode button (Desktop)*/
+ /* dark mode button (Desktop)
  #darkModeToggle {
   position: fixed;
   top: 10px;
@@ -203,9 +203,9 @@ body {
       border-radius: 50px; /* Make it more like a floating button */
       padding: 12px 16px;
       font-size: 16px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow effect 
   }
-}
+} 
 
 /* Dark Mode */
 body.dark-mode {
