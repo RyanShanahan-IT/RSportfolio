@@ -1,4 +1,4 @@
-console.log("Portfolio Website Loaded Successfully");
+console.log("RSHANportfolio Website Loaded Successfully");
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('nav ul li a').forEach(anchor => {
@@ -12,7 +12,7 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
 /* Typewriter Effect for Text*/
 
 let i = 0;
-let text = "Welcome to My Portfolio site! My Name is Ryan Shanahan";
+let text = "Welcome to My Portfolio site! My Name is Ryan Shanahan.";
 function typeWriter() {
     if (i < text.length) {
         document.getElementById("typewriter").innerHTML += text.charAt(i);
@@ -21,6 +21,27 @@ function typeWriter() {
     }
 }
 window.onload = typeWriter;
+/* Typewriter Effect for Text END*/
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.getElementById("darkModeToggle");
+  const body = document.body;
+
+  toggleButton.addEventListener("click", function () {
+      body.classList.toggle("dark-mode");
+
+      // Change button text dynamically
+      if (body.classList.contains("dark-mode")) {
+          toggleButton.textContent = "☀️ Light Mode";
+      } else {
+          toggleButton.textContent = "🌙 Dark Mode";
+      }
+  });
+});
+
+
 
 // Contact button alert
 document.querySelector('#contact').addEventListener('click', () => {
