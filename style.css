@@ -136,27 +136,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Ripple effect on click */
-.project-link::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 10px;
-    height: 10px;
-    background: rgba(255, 255, 255, 0.5);
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    opacity: 0;
-    transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out;
-}
-
-.project-link:active::after {
-    width: 200px;
-    height: 200px;
-    opacity: 0;
-}
-
 /* Animated border effect */
 .project-link::before {
     content: "";
