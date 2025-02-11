@@ -94,3 +94,23 @@ body {
 #darkModeToggle:hover {
   background-color: #555;
 }
+
+/* Adding style to links */
+.project-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue color */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.project-link:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+
+
