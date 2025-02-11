@@ -114,20 +114,22 @@ body {
 
 }
   */
-.project-link {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 5px;
-  background: linear-gradient(45deg, #34f71f, #2bff55);
-  box-shadow: 0 4px 10px rgba(255, 75, 43, 0.3);
-  transition: box-shadow 0.3s, transform 0.2s;
+  .project-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background 0.3s, transform 0.2s;
 }
 
 .project-link:hover {
-  box-shadow: 0 4px 20px rgba(255, 75, 43, 0.6);
-  transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
 }
 
 
