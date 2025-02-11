@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -161,8 +161,6 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   padding: 20px;
-  background: linear-gradient(135deg, #003366, #1a3d7c); /* Dark blue gradient */
-  border-radius: 10px;
 }
 
 .skill-card {
