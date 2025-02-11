@@ -194,18 +194,21 @@ body {
   cursor: pointer;
   transition: background 0.3s;
 }
+  */
 /* Change position for mobile devices */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   #darkModeToggle {
-      top: auto;  /* Remove top positioning */
-      bottom: 20px; /* Move to bottom */
-      right: 20px; /* Keep it on the right */
-      border-radius: 50px; /* Make it more like a floating button */
+      top: auto; 
+      bottom: 20px; 
+      right: 20px; 
+      border-radius: 50px; 
       padding: 12px 16px;
       font-size: 16px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow effect 
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
   }
-} 
+   */
+
+  
 
 /* Dark Mode */
 body.dark-mode {
