@@ -120,7 +120,7 @@ body {
   font-weight: bold;
   padding: 8px 16px;
   border-radius: 5px;
-  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  background: linear-gradient(45deg, #34f71f, #2bff55);
   box-shadow: 0 4px 10px rgba(255, 75, 43, 0.3);
   transition: box-shadow 0.3s, transform 0.2s;
 }
