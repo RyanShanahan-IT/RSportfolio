@@ -9,8 +9,9 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     });
   });
 });
-/* Typewriter Effect for Text*/
 
+
+/* Typewriter Effect for Text*/
 let i = 0;
 let text = "Welcome to my Portfolio Website! My Name is Ryan Shanahan.";
 function typeWriter() {
