@@ -36,7 +36,7 @@ body {
     padding: 2rem;
   }
   .project-card {
-    border: 5px solid #ddd;
+    border: 3px solid #ddd;
     padding: 1rem;
     margin: 1rem 0;
   }
@@ -65,7 +65,7 @@ body {
     background: #0056b3;
   }
 
-  /* dark mode button */
+  /* dark mode button (Desktop)*/
 #darkModeToggle {
   position: fixed;
   top: 10px;
@@ -77,6 +77,18 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;
+}
+/* Change position for mobile devices */
+@media (max-width: 768px) {
+  #darkModeToggle {
+      top: auto;  /* Remove top positioning */
+      bottom: 20px; /* Move to bottom */
+      right: 20px; /* Keep it on the right */
+      border-radius: 50px; /* Make it more like a floating button */
+      padding: 12px 16px;
+      font-size: 16px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  }
 }
 
 #darkModeToggle:hover {

@@ -12,7 +12,7 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
 /* Typewriter Effect for Text*/
 
 let i = 0;
-let text = "Welcome to My Portfolio site! My Name is Ryan Shanahan.";
+let text = "Welcome to my Portfolio Website! My Name is Ryan Shanahan.";
 function typeWriter() {
     if (i < text.length) {
         document.getElementById("typewriter").innerHTML += text.charAt(i);
@@ -24,7 +24,7 @@ window.onload = typeWriter;
 /* Typewriter Effect for Text END*/
 
 
-
+/*clicking toggles dark mode, and the button text updates.*/
 document.addEventListener("DOMContentLoaded", function () {
   const toggleButton = document.getElementById("darkModeToggle");
   const body = document.body;
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   });
 });
-
+/*Dark mode button END*/
 
 
 // Contact button alert
