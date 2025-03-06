@@ -38,6 +38,7 @@ body {
   }
   .project-card {
     border: 3px solid #dddddd6f;
+    background-color: #c7d5f9;
     padding: 1rem;
     margin: 1rem 0;
     border-radius: 5px;
@@ -55,8 +56,9 @@ body {
 }
 /* For project pics*/
 .img-project {
+
   height: 100%;
-  max-width: 300px;
+  max-height: 300px;
 
   width: auto;
   max-width: 400px;
