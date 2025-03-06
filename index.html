@@ -49,20 +49,20 @@
       <h3>Python for Data Science </h3>
       <h3>Issued by IBM </h3>
       <p>Earned by creating my own Python scripts and performing basic hands-on data analysis using IBM's Jupyter-based lab environment.</p>
-       <img src="images/python-for-data-science.png" class="img-badge" alt="Python for Data Science">
+       <img src="images/python-for-data-science.png" class="img-badge" alt="Python for Data Science" onclick="openImageFullscreen(this)">
       </div>
 
     <div class="project-card">
         <h3>AWS Academy Graduate - AWS Academy Introduction to Cloud Semester 1</h3>
         <p>Issued by AWS Academy</p>
-        <img src="images\aws-academy-graduate-aws-academy-introduction-to-cloud-semester-1.png" class="img-badge" alt="AWS-grad">
+        <img src="images\aws-academy-graduate-aws-academy-introduction-to-cloud-semester-1.png" class="img-badge" alt="AWS-grad" onclick="openImageFullscreen(this)">
       </div>
 
       <div class="project-card">
         <h3>DBS Work Readiness</h3>
         <p>Issued by Dublin Business School</p>
         <p>For Completion of 21 lessons which prepare students to enagage in the hiring market upon gradtuation. </p>
-        <img src="images\DBSWorkReadiness.png" class="img-badge" alt="DBS-WorkReadiness">
+        <img src="images\DBSWorkReadiness.png" class="img-badge" alt="DBS-WorkReadiness" onclick="openImageFullscreen(this)">
       </div>
   </section>
 
@@ -136,9 +136,9 @@
       <h3>A two part software engineering assignemnt featuring a system analysis and software system </h3>
       <p>For the first part of this assignment I was tasked with developing the specifications of a system (min of 6 classes) of my choice along with 4 UML diagrams to explain it.</p>
       <p>Part two of the assignment involved the implementation of some parts of this system using C# .</p>
-      <img src="images\RS_LibrarySequenceDiagram.drawio.png" class="img-badge" alt="RS_LibrarySequenceDiagram">
-      <img src="images\part2AddBook.png" class="img-badge" alt="RS_LibraryAddBook">
-      <img src="images\complete.png" class="img-badge" alt="RS_AddBookSuccess">
+      <img src="images\RS_LibrarySequenceDiagram.drawio.png" class="img-badge" alt="RS_LibrarySequenceDiagram" onclick="openImageFullscreen(this)">
+      <img src="images\part2AddBook.png" class="img-badge" alt="RS_LibraryAddBook" onclick="openImageFullscreen(this)">
+      <img src="images\complete.png" class="img-badge" alt="RS_AddBookSuccess" onclick="openImageFullscreen(this)">
       <P></P>
       <a href="https://drive.google.com/file/d/1021VaH_8RpbF_iMp1bsSAMZb5o_rBE0T/view?usp=drive_link" class="project-link" target="_blank">View part 1 and 2 on Google Drive</a>
     </div>
@@ -148,27 +148,15 @@
       <p>This project involved creating my own Visual Studio Solution appliction which allows users to login with a correct username and password.
          Once in the main menu users can view and update already existing accounts or create their own as the video below showcases </p>
 
-      <img src="images\RS_bank_classDiagram.jpg" class="img-badge" alt="RS_bank_classDiagram">
+      <img src="images\RS_bank_classDiagram.jpg" class="img-badge" alt="RS_bank_classDiagram" onclick="openImageFullscreen(this)">
       <p></p>
       <video id="rsBankDemo" width="600" controls>
         <source src="images\Rs_bank_vid.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+    <p></p>
+    <button onclick="openFullscreen()" class="project-link" >Fullscreen video</button>
 
-    <button onclick="openFullscreen()">Fullscreen</button>
-
-    <script>
-        function openFullscreen() {
-            let video = document.getElementById("rsBankDemo");
-            if (video.requestFullscreen) {
-                video.requestFullscreen();
-            } else if (video.webkitRequestFullscreen) { // Safari
-                video.webkitRequestFullscreen();
-            } else if (video.msRequestFullscreen) { // IE11
-                video.msRequestFullscreen();
-            }
-        }
-    </script>
       <P></P>
       <a href="https://drive.google.com/file/d/18BvYAcTPj_6wxAT3U1qlcx9wBW3QvuyL/view?usp=drive_link" class="project-link" target="_blank">View on Google Drive</a>
     </div>

@@ -25,6 +25,32 @@ window.onload = typeWriter;
 /* Typewriter Effect for Text END*/
 
 
+/* Full screen vid*/
+function openFullscreen() {
+  let video = document.getElementById("rsBankDemo");
+  if (video.requestFullscreen) {
+      video.requestFullscreen();
+  } else if (video.webkitRequestFullscreen) { // Safari
+      video.webkitRequestFullscreen();
+  } else if (video.msRequestFullscreen) { // IE11
+      video.msRequestFullscreen();
+  }
+}
+/* Full screen vid END*/
+
+
+/* Full screen pic*/
+function openImageFullscreen(img) {
+  if (img.requestFullscreen) {
+      img.requestFullscreen();
+  } else if (img.webkitRequestFullscreen) { // Safari
+      img.webkitRequestFullscreen();
+  } else if (img.msRequestFullscreen) { // IE11
+      img.msRequestFullscreen();
+  }
+}
+/* Full screen pic END*/
+
 /*clicking toggles dark mode, and the button text updates.*/
 document.addEventListener("DOMContentLoaded", function () {
   const toggleButton = document.getElementById("darkModeToggle");
