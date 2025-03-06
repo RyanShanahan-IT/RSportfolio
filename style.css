@@ -56,7 +56,10 @@ body {
 /* For project pics*/
 .img-project {
   height: 100%;
+  max-width: 300px;
+
   width: auto;
+  max-width: 400px;
   cursor: pointer;
   transition: transform 0.2s;
 }
