@@ -150,7 +150,25 @@
 
       <img src="images\RS_bank_classDiagram.jpg" class="img-badge" alt="RS_bank_classDiagram">
       <p></p>
-      <video src="images\Rs_bank_vid - Made with Clipchamp.mp4" class="img-badge" alt="RS_bank_vid">
+      <video id="rsBankDemo" width="600" controls>
+        <source src="images\Rs_bank_vid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <button onclick="openFullscreen()">Fullscreen</button>
+
+    <script>
+        function openFullscreen() {
+            let video = document.getElementById("myVideo");
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.webkitRequestFullscreen) { // Safari
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) { // IE11
+                video.msRequestFullscreen();
+            }
+        }
+    </script>
       <P></P>
       <a href="https://drive.google.com/file/d/18BvYAcTPj_6wxAT3U1qlcx9wBW3QvuyL/view?usp=drive_link" class="project-link" target="_blank">View on Google Drive</a>
     </div>
