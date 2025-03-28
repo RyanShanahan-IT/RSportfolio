@@ -1,9 +1,19 @@
 body {
-    font-family: Arial, sans-serif;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+ /* light Mode */
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
   }
+
+  /* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
   header {
     background: #333;
 
@@ -33,6 +43,7 @@ body {
   nav ul {
     list-style: none;
     padding: 0;
+
   }
   nav ul li {
     display: inline;
@@ -46,10 +57,36 @@ body {
     padding: 2rem;
   }
   .project-card {
-    border: 1px solid #ddd;
+    border: 3px solid #dddddd6f;
+    background-color: #c7d5f9;
     padding: 1rem;
     margin: 1rem 0;
+    border-radius: 5px;
   }
+
+  /* for badges */
+ .img-badge {
+    width: 30%;  /* Each image takes 30% of the container */
+    max-width: 200px; /* Prevents them from getting too big */
+    height: auto; /* Keeps aspect ratio */
+    
+ }
+ .img-badge:hover {
+  transform: scale(1.1);
+}
+
+/* For project pics*/
+.img-project {
+
+  height: 100%;
+  max-height: 300px;
+
+  width: auto;
+  max-width: 400px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
   footer {
     background: #333;
     color: white;
@@ -76,6 +113,8 @@ body {
     background-repeat: repeat;
   }
   }
+
+ 
   button {
     padding: 10px 20px;
     margin: 10px;
@@ -89,3 +128,157 @@ body {
     background: #0056b3;
   }
 
+<<<<<<< HEAD
+=======
+  /* dark mode button (Desktop)*/
+#darkModeToggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+/* Change position for mobile devices */
+@media (max-width: 768px) {
+  #darkModeToggle {
+     position: fixed;
+      top: auto;  /* Remove top positioning */
+      bottom: 20px; /* Move to bottom */
+      right: 20px; /* Keep it on the right */
+      border-radius: 50px; /* Make it more like a floating button */
+      padding: 12px 16px;
+      font-size: 16px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  }
+}
+
+#darkModeToggle:hover {
+  background-color: #555;
+}
+
+  .project-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #007bff, #0056b3); /* Gradient */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Glow effect on hover */
+.project-link:hover {
+    background: linear-gradient(45deg, #0056b3, #003c7a);
+    box-shadow: 0px 4px 20px rgba(0, 123, 255, 0.6);
+    transform: scale(1.05);
+}
+
+/* Animated border effect */
+.project-link::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff, #0056b3, #003c7a);
+    border-radius: 10px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-link:hover::before {
+    opacity: 1;
+}
+
+
+
+/* Skills section style*/
+
+
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  background: #f0efeffa; /* Light background */
+  border-radius: 10px;
+}
+
+.skill-card {
+  background-color: rgba(0, 0, 0, 0.05); /* Light transparent background */
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s, color 0.3s;
+}
+.skill-card:hover {
+  transform: scale(1.05);
+}
+.skill-card h3 {
+  margin-bottom: 10px;
+}
+ /* icon */
+.skill-card h3 i {
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 3em; /* Icon size */
+}
+.skill-card ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.skill-card li {
+  margin: 5px 0;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .skills-container {
+  background: #1e1e1e; /* Dark background for the grid */
+}
+body.dark-mode  .project-card {
+  background-color: #1e1e1e;
+
+}
+body.dark-mode .skill-card {
+  background-color: rgba(255, 255, 255, 0.1); /* Dark transparent background for cards */
+  color: #fff;
+}
+
+body.dark-mode #darkModeToggle {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+body.dark-mode .skill-card:hover {
+  transform: scale(1.05);
+}
+
+/* Dark mode icon color */
+body.dark-mode .skill-card h3 i {
+  color: #fff; /* White icon color in dark mode */
+}
+
+/* Light mode icon color */
+body .skill-card h3 i {
+  color: #4CAF50; /* Green icon color in light mode */
+}
+>>>>>>> 44332c3b714f13e618ce92f559f231b94fd6b238

@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
+<<<<<<< HEAD
     ""
+=======
+    "",
+    "\\images"
+>>>>>>> 44332c3b714f13e618ce92f559f231b94fd6b238
   ],
   "PreviewInSolutionExplorer": false
 }
