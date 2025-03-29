@@ -49,6 +49,19 @@ function openFullscreenMITM() {
 }
 /* Full screen vid END*/
 
+/* Full screen vid*/
+function openFullscreenElemental() {
+  let video = document.getElementById("ElementalVid");
+  if (video.requestFullscreen) {
+      video.requestFullscreen();
+  } else if (video.webkitRequestFullscreen) { // Safari
+      video.webkitRequestFullscreen();
+  } else if (video.msRequestFullscreen) { // IE11
+      video.msRequestFullscreen();
+  }
+}
+/* Full screen vid END*/
+
 
 /* Full screen pic*/
 function openImageFullscreen(img) {
