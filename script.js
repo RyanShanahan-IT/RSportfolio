@@ -26,8 +26,19 @@ window.onload = typeWriter;
 
 
 /* Full screen vid*/
-function openFullscreen() {
+function openFullscreenBank() {
   let video = document.getElementById("rsBankDemo");
+  if (video.requestFullscreen) {
+      video.requestFullscreen();
+  } else if (video.webkitRequestFullscreen) { // Safari
+      video.webkitRequestFullscreen();
+  } else if (video.msRequestFullscreen) { // IE11
+      video.msRequestFullscreen();
+  }
+}
+/* Full screen vid*/
+function openFullscreenMITM() {
+  let video = document.getElementById("MITMDemo");
   if (video.requestFullscreen) {
       video.requestFullscreen();
   } else if (video.webkitRequestFullscreen) { // Safari
