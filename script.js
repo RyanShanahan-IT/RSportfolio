@@ -62,6 +62,19 @@ function openFullscreenElemental() {
 }
 /* Full screen vid END*/
 
+/* Full screen vid*/
+function openFullscreenHospital() {
+  let video = document.getElementById("HospitalDemo");
+  if (video.requestFullscreen) {
+      video.requestFullscreen();
+  } else if (video.webkitRequestFullscreen) { // Safari
+      video.webkitRequestFullscreen();
+  } else if (video.msRequestFullscreen) { // IE11
+      video.msRequestFullscreen();
+  }
+}
+/* Full screen vid END*/
+
 
 /* Full screen pic*/
 function openImageFullscreen(img) {
