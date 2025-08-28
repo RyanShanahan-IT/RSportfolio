@@ -272,6 +272,31 @@ button:hover {
   opacity: 1;
 }
 
+/* Project button alignment fixes */
+.project-card .project-link,
+.project-card button.project-link {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+/* Container for project buttons to ensure proper alignment */
+.project-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+/* Ensure buttons and links have consistent styling */
+.project-card button,
+.project-card a.project-link {
+  flex-shrink: 0;
+  text-align: center;
+  min-width: fit-content;
+}
+
 /* Skills section style*/
 .skills-container {
   display: grid;
