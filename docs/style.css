@@ -581,6 +581,12 @@ video {
   margin: 1rem 0;
 }
 
+/* Specific styling for Bakery Scramble video */
+#BakeryScrambleVid {
+  height: 200px; /* Half of the original 400px height */
+  width: auto; /* Maintain aspect ratio */
+}
+
 /* Badge section enhancements */
 #badges .project-card {
   text-align: center;
