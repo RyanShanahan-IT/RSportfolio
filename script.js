@@ -11,18 +11,29 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
 });
 
 
-/* Typewriter Effect for Text*/
+/* Enhanced Typewriter Effect for Text */
 let i = 0;
 let text = "Welcome to my Portfolio Website! My Name is Ryan Shanahan.";
+let cursorVisible = true;
+
 function typeWriter() {
     if (i < text.length) {
-        document.getElementById("typewriter").innerHTML += text.charAt(i);
+        document.getElementById("typewriter").innerHTML = text.substring(0, i + 1) + '<span class="cursor">|</span>';
         i++;
         setTimeout(typeWriter, 100);
+    } else {
+        // Blinking cursor after typing is complete
+        setInterval(() => {
+            cursorVisible = !cursorVisible;
+            const cursor = document.querySelector('.cursor');
+            if (cursor) {
+                cursor.style.opacity = cursorVisible ? '1' : '0';
+            }
+        }, 500);
     }
 }
 window.onload = typeWriter;
-/* Typewriter Effect for Text END*/
+/* Enhanced Typewriter Effect END */
 
 
 /* Full screen vid*/
@@ -107,7 +118,105 @@ document.addEventListener("DOMContentLoaded", function () {
 /*Dark mode button END*/
 
 
-// Contact button alert
-document.querySelector('#contact').addEventListener('click', () => {
-  alert('Thank you for visiting! Feel free to reach out to any of my socials listed below!');
+// Project Filtering Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Remove active class from all buttons
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      // Add active class to clicked button
+      button.classList.add('active');
+
+      const filter = button.getAttribute('data-filter');
+
+      projectCards.forEach(card => {
+        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+          card.style.display = 'block';
+          card.style.animation = 'fadeIn 0.5s ease-in';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+
+// Contact Form Handling
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.getElementById('contactForm');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(contactForm);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const subject = formData.get('subject');
+      const message = formData.get('message');
+      
+      // Simple validation
+      if (!name || !email || !subject || !message) {
+        alert('Please fill in all fields');
+        return;
+      }
+      
+      // Show success message (in a real app, you'd send this to a server)
+      alert(`Thank you for your message, ${name}! I'll get back to you at ${email} soon.`);
+      
+      // Reset form
+      contactForm.reset();
+    });
+  }
+});
+
+// Enhanced Contact Section Interaction
+document.addEventListener('DOMContentLoaded', function() {
+  const contactSection = document.querySelector('#contact');
+  
+  if (contactSection) {
+    contactSection.addEventListener('click', (e) => {
+      // Only show alert if clicking on the section itself, not on form elements
+      if (e.target === contactSection || e.target.tagName === 'H2') {
+        alert('Thank you for visiting! Feel free to reach out using the contact form or my social links below!');
+      }
+    });
+  }
+});
+
+// Video Loading States
+document.addEventListener('DOMContentLoaded', function() {
+  const videos = document.querySelectorAll('video');
+  
+  videos.forEach(video => {
+    const loadingElement = video.parentElement.querySelector('.video-loading');
+    
+    if (loadingElement) {
+      // Hide loading when video can start playing
+      video.addEventListener('canplay', () => {
+        loadingElement.classList.add('hidden');
+      });
+      
+      // Show loading if video needs to buffer
+      video.addEventListener('waiting', () => {
+        loadingElement.classList.remove('hidden');
+        loadingElement.textContent = 'Buffering...';
+      });
+      
+      // Hide loading when video can continue playing
+      video.addEventListener('canplay', () => {
+        loadingElement.classList.add('hidden');
+      });
+      
+      // Handle errors
+      video.addEventListener('error', () => {
+        loadingElement.textContent = 'Video failed to load';
+        loadingElement.style.background = 'rgba(255, 0, 0, 0.8)';
+      });
+    }
+  });
 });
