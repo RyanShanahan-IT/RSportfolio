@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <!-- meta desc to help with google searches-->
-  <meta name="description" content="Ryan Shanahan - IT Portfolio | Computer Science Graduate | Cybersecurity | Web Development | Game Development">
+  <meta name="description" content="Ryan Shanahan - IT Portfolio | Computer Science Graduate | Mobile Game Developer | Published Android Game: Bakery Scramble | Cybersecurity | Web Development | Unity Developer">
   <title>Portfolio | Ryan Shanahan</title>
 
   <link rel="icon" href="images\RSHAN logo.png" type="image/png">
@@ -22,8 +22,8 @@
       <ul class="nav">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">My Projects</a></li>
         <li><a href="#games">My Games</a></li>
+        <li><a href="#projects">My Projects</a></li>
         <li><a href="#contact">Contact</a></li>
         <button id="darkModeToggle">🌙 Dark Mode</button>
       </ul>
@@ -33,7 +33,7 @@
   <section id="about">
     <h1><span id="typewriter"></span></h1>
     <p>Computer Science Graduate | Aspiring IT Professional</p>
-    <p>Recent Computer Science graduate with a first-class honors degree, passionate about developing innovative software solutions. Skilled in C#, Python, web development, and cybersecurity. With hands-on experience in full-stack projects and database design.</p>
+    <p>Recent Computer Science graduate with a first-class honors degree, passionate about developing innovative software solutions. Skilled in C#, Python, web development, and cybersecurity. With hands-on experience in full-stack projects and database design. Successfully published mobile game <strong>Bakery Scramble</strong> on Google Play Store, demonstrating expertise in Unity game development and mobile app publishing.</p>
     <p>
       <div class="project-link" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="ryan-shanahan-it" data-version="v1">
         <a class="badge-base__link LI-simple-link" href="https://docs.google.com/document/d/104jyGMTfOEU4qVk1ykIEHFwoCXzsNwvo/edit?usp=drive_link&ouid=110112855032241060013&rtpof=true&sd=true">My Latest CV 📝</a>
@@ -119,6 +119,92 @@
     </div>
   </section>
 
+  <section id="games">
+    <h2>Games 🎮</h2>
+    
+    <!-- Featured Mobile Game - Bakery Scramble -->
+    <div class="project-card featured-game">
+      <div class="featured-badge">⭐ Featured Mobile Game</div>
+      <h3>Bakery Scramble - Mobile Game (Android)</h3>
+      <p class="game-subtitle">Published on Google Play Store | Fast-paced merge puzzle game</p>
+      <p>Successfully developed and published <strong>Bakery Scramble</strong>, a fast-paced merge puzzle game now available on the Google Play Store. This mobile version evolved from my original Unity web game, featuring enhanced gameplay optimized for Android devices. Players drag and drop baking ingredients on a 4x4 grid to create higher-tier items, combining flour, dough, cookies, cupcakes, and cakes to aim for the highest score possible.</p>
+      
+      <div class="game-stats">
+     
+        <div class="stat-item">
+          <i class="fas fa-mobile-alt"></i>
+          <span>Android Optimized</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-star"></i>
+          <span>All Ages</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-star"></i>
+          <span>Free to download with NO in-app purchases or Ads</span>
+        </div>
+      </div>
+
+      <div class="video-screenshots-container">
+        <div class="video-wrapper">
+          <video id="BakeryScrambleVid" width="100%" height="auto" controls>
+            <source src="images\vids\bakeryScramble.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="game-screenshots">
+          <h4>Game Screenshots:</h4>
+          <div class="screenshots-grid">
+            <img src="images\bakery sc\sc1.png" class="img-project screenshot" alt="Bakery Scramble Screenshot 1" onclick="openImageFullscreen(this)">
+            <img src="images\bakery sc\sc2.png" class="img-project screenshot" alt="Bakery Scramble Screenshot 2" onclick="openImageFullscreen(this)">
+            <img src="images\bakery sc\sc3.png" class="img-project screenshot" alt="Bakery Scramble Screenshot 3" onclick="openImageFullscreen(this)">
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-buttons">
+        <a href="https://play.google.com/store/apps/details?id=com.freelabgames.bakeryscramble" class="project-link play-store-link" target="_blank">
+          <i class="fab fa-google-play"></i> Download for free on Google Play
+        </a>
+        <a href="https://play.unity.com/en/games/88e7d3a2-34e9-4edf-8dee-ee922961ff5f/bakery-scramble-v23/edit" class="project-link" target="_blank">
+          <i class="fas fa-gamepad"></i> Play for free on the Web Version on Unity Play
+        </a>
+      </div>
+      
+      <div class="game-features">
+        <h4>Key Features:</h4>
+        <ul>
+          <li>Strategic merge puzzle gameplay on a 4x4 grid</li>
+          <li>Multiple difficulty modes (Relaxed, Normal, Hardcore, Classic)</li>
+          <li>Time management mechanics with adjustable spawn rates</li>
+          <li>High score tracking and leaderboard system</li>
+          <li>Optimized for Android phones with smooth performance</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>2D Unity Board Game: Elemental Chaos</h3>
+      <p>Developed a complete digital board game using the Unity engine, built entirely from the ground up. This project was chosen to expand my Unity knowledge while developing advanced C# programming skills. The experience of using C# in a visual context allowed me to see the immediate impact of my code, making the development process both educational and enjoyable.</p>
+
+      <img src="images\maingame.png" class="img-project" alt="ElementalGame" onclick="openImageFullscreen(this)">
+      <img src="images\menugame.png" class="img-project" alt="ElementalMenu" onclick="openImageFullscreen(this)">
+      
+      <video id="ElementalVid" width="600" controls>
+        <source src="images\vids\Game_Demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="project-buttons">
+        <button onclick="openFullscreenElemental()" class="project-link">Fullscreen Video</button>
+        <a href="https://drive.google.com/file/d/1gTJEC78zhB-0oXb33lOltBznndBIvtLm/view?usp=drive_link" class="project-link" target="_blank">Download Project from Google Drive</a>
+        <a href="https://docs.google.com/document/d/11mDfnbSkk1BSm2TRAhEslSP_R_P54tQe/edit?usp=drive_link&ouid=110112855032241060013&rtpof=true&sd=true" class="project-link" target="_blank">Download Report from Google Drive</a>
+      </div>
+    </div>
+
+  </section>
+
   <section id="projects">
     <h2>Projects</h2>
     
@@ -192,40 +278,6 @@
     </div>
   </section>
 
-  <section id="games">
-    <h2>Games 🎮</h2>
-    <div class="project-card">
-      <h3>2D Unity Board Game: Elemental Chaos</h3>
-      <p>Developed a complete digital board game using the Unity engine, built entirely from the ground up. This project was chosen to expand my Unity knowledge while developing advanced C# programming skills. The experience of using C# in a visual context allowed me to see the immediate impact of my code, making the development process both educational and enjoyable.</p>
-
-      <img src="images\maingame.png" class="img-project" alt="ElementalGame" onclick="openImageFullscreen(this)">
-      <img src="images\menugame.png" class="img-project" alt="ElementalMenu" onclick="openImageFullscreen(this)">
-      
-      <video id="ElementalVid" width="600" controls>
-        <source src="images\vids\Game_Demo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-
-      <div class="project-buttons">
-        <button onclick="openFullscreenElemental()" class="project-link">Fullscreen Video</button>
-        <a href="https://drive.google.com/file/d/1gTJEC78zhB-0oXb33lOltBznndBIvtLm/view?usp=drive_link" class="project-link" target="_blank">Download Project from Google Drive</a>
-        <a href="https://docs.google.com/document/d/11mDfnbSkk1BSm2TRAhEslSP_R_P54tQe/edit?usp=drive_link&ouid=110112855032241060013&rtpof=true&sd=true" class="project-link" target="_blank">Download Report from Google Drive</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <h3>Bakery Scramble- Unity Web Game</h3>
-      <p>Developed a fun bakery-themed merge puzzle game using Unity, featuring time management mechanics and strategic gameplay. Making this enchanced my skills in Unity development and game design principles by getting player feedback.</p>
-      <video id="BakeryScrambleVid" width="600" height="400" controls>
-        <source src="images\vids\bakeryScramble.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="project-buttons">
-        <a href="https://play.unity.com/en/games/88e7d3a2-34e9-4edf-8dee-ee922961ff5f/bakery-scramble-v23/edit" class="project-link" target="_blank">Play Bakery Scramble on Unity Play</a>
-      </div>
-    </div>
-  </section>
-
   <section id="contact">
     <h2>Contact</h2>
     <div class="contact-container">
@@ -247,8 +299,8 @@
         <li><a href="#badges">Badges</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#projects">My Projects</a></li>
         <li><a href="#games">My Games</a></li>
+        <li><a href="#projects">My Projects</a></li>
       </ul>
     </nav>
     <p><strong>&copy; 2025 Ryan Shanahan. All Rights Reserved.</strong></p>
