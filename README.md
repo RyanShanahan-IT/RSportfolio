@@ -37,7 +37,7 @@ Open `http://127.0.0.1:8000`. You can also open `index.html` directly, although 
 - Connect skills to project evidence rather than using proficiency percentages.
 - Keep image originals available through keyboard-accessible links, while showing smaller WebP versions inline.
 - Set video `preload="none"`, supply posters, and lazy-load images below the opening section. The existing MP4 files remain available; they have not been re-encoded.
-- Use system fonts and local assets; no external font or icon library is required.
+- Use locally hosted DM Sans (SIL Open Font License) with system-font fallbacks. No external font service or icon library is required.
 - Respect the system colour scheme until a visitor selects a theme. Storage failures do not prevent the control working for the current visit.
 - Honour reduced-motion preferences and provide focus indicators and a skip link.
 
@@ -72,3 +72,15 @@ See [content follow-ups](docs/content-follow-ups.md) for additions that require 
 ## Hosting
 
 The existing Netlify site serves the repository root as static files. No new hosting configuration is needed. Review branch changes before merging into the production branch.
+
+## Code style
+
+Use two-space indentation, descriptive names and small functions. Keep HTML sections expanded so their structure is easy to follow. Add comments for decisions that need explaining.
+
+Format HTML, CSS and JavaScript with the checked-in Prettier settings:
+
+```sh
+npm exec --yes --package=prettier@3.6.2 -- prettier --write index.html style.css script.js
+```
+
+The font and its licence are in `assets/fonts/`.

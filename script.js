@@ -9,7 +9,9 @@
     preference = localStorage.getItem('portfolio-theme');
     // Preserve the preference used by earlier portfolio versions.
     if (!preference && localStorage.getItem('darkMode') === 'enabled') preference = 'dark';
-  } catch { /* Storage may be unavailable; the toggle still works for this visit. */ }
+  } catch {
+    /* Storage may be unavailable; the toggle still works for this visit. */
+  }
 
   if (preference === 'light' || preference === 'dark') root.dataset.theme = preference;
 
@@ -24,7 +26,11 @@
     toggle.addEventListener('click', () => {
       const dark = toggle.getAttribute('aria-pressed') === 'true';
       root.dataset.theme = dark ? 'light' : 'dark';
-      try { localStorage.setItem('portfolio-theme', root.dataset.theme); } catch { /* Optional persistence. */ }
+      try {
+        localStorage.setItem('portfolio-theme', root.dataset.theme);
+      } catch {
+        /* Optional persistence. */
+      }
       updateToggle();
     });
     systemTheme.addEventListener('change', updateToggle);
@@ -33,7 +39,11 @@
   // Open a disclosure when a skill link or a shared URL targets its project.
   function revealLinkedProject() {
     let id;
-    try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+    try {
+      id = decodeURIComponent(location.hash.slice(1));
+    } catch {
+      return;
+    }
     const target = document.getElementById(id);
     if (target?.tagName === 'DETAILS') target.open = true;
   }
