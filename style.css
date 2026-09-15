@@ -224,6 +224,34 @@ nav a:hover {
   white-space: nowrap;
 }
 
+/* Small SVG icons share the text colour in both themes. */
+.icon {
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  flex: 0 0 auto;
+  vertical-align: -0.18em;
+}
+
+.text-link > .icon {
+  margin-right: 0.45em;
+}
+
+.icon-label,
+.icon-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.icon-heading > .icon {
+  color: var(--accent);
+}
+
+.icon-heading > span {
+  min-width: 0;
+}
+
 /* Introduction */
 .hero {
   display: grid;

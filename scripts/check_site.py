@@ -6,6 +6,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 import sys
+import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -65,6 +66,10 @@ def main():
             path = (ROOT / unquote(parsed.path)).resolve()
             if not path.is_relative_to(ROOT) or not path.is_file():
                 errors.append(f'Missing or invalid local file: {reference}')
+            elif path.suffix == '.svg' and parsed.fragment:
+                symbols = {element.get('id') for element in ET.parse(path).iter()}
+                if parsed.fragment not in symbols:
+                    errors.append(f'Missing SVG icon: {reference}')
             local_files.add(path)
     cv = ROOT / 'documents/Ryan-Shanahan-CV.pdf'
     if not cv.read_bytes().startswith(b'%PDF-'):
